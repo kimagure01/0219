@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 95%;
+    max-width: none;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #d19bfe; /* 主要色系 */
+    font-size: 24px;
+    margin-top: 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+form input, form button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #d19bfe; /* 主要色系 */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f4f4f4; /* 淺灰色背景 */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+form input {
+    width: 400px; /* 加長搜尋欄寬度 */
+}
+
+form input:focus {
+    border-color: #d29ddbde; /* 次要色系 */
+    background-color: white; /* 白色背景 */
+    outline: none;
+}
+
+form button {
+    background-color: #d19bfe; /* 主要色系 */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* 新增 IG 按鈕樣式 */
+.ig-button {
+    padding: 10px 15px; /* 與搜尋按鈕相同的內邊距 */
+    background-color: #F56040    ; /* 主要色系 */
+    color: white;
+    border: 1px solid #d19bfe; /* 主要色系 */
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px; /* 與搜尋按鈕相同的字體大小 */
+    line-height: 1; /* 確保按鈕高度一致 */
+    display: inline-flex; /* 確保按鈕高度與搜尋按鈕一致 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    margin: 5px; /* 與搜尋按鈕相同的間距 */
+}
+
+.ig-button:hover {
+    background-color: #d29ddbde; /* 次要色系 */
+}
+
+/* 手機版按鈕優化 */
+@media (max-width: 768px) {
+    form input, form button, .ig-button {
+        width: 100%; /* 按鈕寬度佔滿整個容器 */
+        margin: 5px 0; /* 調整間距 */
+        font-size: 14px; /* 手機版字體大小 */
+    }
+
+    form {
+        flex-direction: column; /* 垂直排列按鈕 */
+    }
+
+    .ig-button {
+        padding: 10px; /* 手機版內邊距 */
+    }
+}
+form button:hover {
+    background-color: #d29ddbde; /* 次要色系 */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 表格陰影效果 */
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #c78df7ba; /* 主要色系 */
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+table tr:nth-child(even) {
+    background-color: #d3aed9de; /* 偶數欄位次要色系 */
+}
+
+table tr:hover {
+    background-color: #ffddfac7; /* 滑鼠懸停效果 */
+}
+
+/* 調整欄位寬度 */
+table th:nth-child(1), table td:nth-child(1) { width: 15%; } /* 節目名稱 */
+table th:nth-child(2), table td:nth-child(2) { width: 5%; } /* 網址 */
+table th:nth-child(3), table td:nth-child(3) { width: 35%; } /* 摘要 */
+table th:nth-child(4), table td:nth-child(4) { width: 45%; } /* 重點目錄 */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #d19bfe; /* 主要色系 */
+    border: 1px solid #d19bfe; /* 主要色系 */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a.active {
+    background-color: #d19bfe; /* 主要色系 */
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #d29ddbde; /* 次要色系 */
+    color: white;
+}
+
+.suggestions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.suggestions button {
+    padding: 10px 15px;
+    background-color: #d19bfe; /* 主要色系 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.suggestions button:hover {
+    background-color: #d29ddbde; /* 次要色系 */
+}
+
+
+
+/* 手機版表格優化 */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    form input, form button {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+        display: table; /* 移除橫向滾動 */
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 8px;
+        white-space: normal; /* 允許文字換行 */
+    }
+
+    table th:nth-child(1), table td:nth-child(1) { width: 15%; } /* 節目名稱 */
+    table th:nth-child(2), table td:nth-child(2) { width: 5%; } /* 網址 */
+    table th:nth-child(3), table td:nth-child(3) { width: 35%; } /* 摘要 */
+    table th:nth-child(4), table td:nth-child(4) { width: 45%; } /* 重點目錄 */
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    form input, form button {
+        font-size: 12px;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    table th, table td {
+        padding: 6px;
+    }
+}
